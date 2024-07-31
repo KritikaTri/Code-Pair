@@ -59,7 +59,7 @@ const EditorPage = () => {
 			socketRef.current.off(ACTIONS.JOINED);
 			socketRef.current.off(ACTIONS.DISCONNECTED);
 		};
-	}, []);
+	}, [location.state?.username, reactNavigator, roomId]);
 
 	if (!location.state) {
 		return <Navigate to='/' />;

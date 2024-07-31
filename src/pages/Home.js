@@ -9,6 +9,7 @@ const Home = () => {
 
 	const [roomId, setRoomId] = useState('');
 	const [username, setUsername] = useState('');
+
 	const createNewRoom = (e) => {
 		e.preventDefault();
 		const id = uuidv4();
@@ -46,7 +47,7 @@ const Home = () => {
 					</button>
 					<span className='createInfo'>
 						If You don't have invite then create &nbsp;
-						<a href='' onClick={createNewRoom} className='createNewBtn'>
+						<a href='#' onClick={createNewRoom} className='createNewBtn'>
 							New Room
 						</a>
 					</span>
