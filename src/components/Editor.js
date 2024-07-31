@@ -11,6 +11,8 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 	const editorRef = useRef(null);
 
 	useEffect(() => {
+		const currentSocketRef = socketRef.current;
+
 		async function init() {
 			editorRef.current = Codemirror.fromTextArea(document.getElementById('realTimeEditor'), {
 				mode: { name: 'javascript', json: true },
@@ -25,13 +27,20 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 				const code = instance.getValue();
 				onCodeChange(code);
 				if (origin !== 'setValue') {
-					socketRef.current.emit(ACTIONS.CODE_CHANGE, { roomId, code });
+					currentSocketRef.emit(ACTIONS.CODE_CHANGE, { roomId, code });
 				}
 			});
 		}
 
 		init();
-	}, [onCodeChange, roomId, socketRef]);
+
+		return () => {
+			if (currentSocketRef) {
+				currentSocketRef.disconnect();
+				currentSocketRef.off(ACTIONS.CODE_CHANGE);
+			}
+		};
+	}, [socketRef, roomId, onCodeChange]);
 
 	useEffect(() => {
 		if (socketRef.current) {
@@ -41,11 +50,6 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 				}
 			});
 		}
-		return () => {
-			if (socketRef.current) {
-				socketRef.current.off(ACTIONS.CODE_CHANGE);
-			}
-		};
 	}, [socketRef]);
 
 	return (
