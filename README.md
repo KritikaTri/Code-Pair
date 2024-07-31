@@ -11,7 +11,7 @@ Currently the Project only supports Code Editor which was implemented during the
 
 ### Deployment 🌐
 
-Project is deployed on Heroku, Link to Project - <a href="https://realtime-codepair.herokuapp.com/">Code Pair</a>
+Link to Project - <a href="https://realtime-codepair.herokuapp.com/">Code Pair</a>
 
 ### Usage 
 
