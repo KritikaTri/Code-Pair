@@ -22,10 +22,13 @@ Code Pair is a web-based application that enables multiple users to collaborate 
 
 ## Screenshots
 
-![Screenshot 1](images/image1.png)
+![Screenshot 1](![image1](https://github.com/user-attachments/assets/26c9a7ec-0255-42c0-af3f-628e62adf31a)
+)
+)
 *Login Page*
 
-![Screenshot 2](images/image2.png)
+![Screenshot 2](![image](https://github.com/user-attachments/assets/43387760-0e41-4030-8d4a-c2d35c9930c5)
+)
 *Editing Page*
 
 
