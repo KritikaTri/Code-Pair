@@ -1,51 +1,80 @@
-## Code Pair 
+# Code-Pair
 
-### Description 
+## Overview
 
-💻 Code Pair is a Realtime Code Editor and a collaboration tool built with React, Node, Express and Socket.io. It uses web sockets for syncing code and setting up connection between client and server. 
+Code Pair is a web-based application that enables multiple users to collaborate in real time on code editing. It offers a seamless and interactive environment for developers, students, or teams to work on code together and observe each other's changes instantly.
 
-A user a create a new room, share room ID with other peers, work on code real time. The Editor has syntax highlighting, indentation, autocomplete and brace matching functionality. 
+## Features
 
-Currently the Project only supports Code Editor which was implemented during the build phase of hackathon, in the future compiler can be added, other features like real time chat, video-call, etc can be added. 
+- Real-time code editing with live synchronization.
+- Multi-user support for collaborative coding.
+- Code highlighting and auto-indentation.
+- User-friendly chat interface for communication.
+- Room creation and joining with unique room IDs.
+- Notification system for important events.
+
+## Table of Contents
+
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+
+## Screenshots
+
+![Screenshot 1](images/image1.png)
+*Login Page*
+
+![Screenshot 2](images/image2.png)
+*Editing Page*
 
 
-### Deployment 🌐
 
-Link to Project - <a href="https://code-pair-editor.netlify.app">Code Pair</a>
+## Getting Started
 
-### Usage 
+Follow these steps to set up and run the project locally:
 
-For Setting up the project 
+1. Clone the repository:
 
->  Clone the repository 
+   ```bash
+    git clone https://github.com/Raunik2/Code_Pair.git
 
-  `git clone <URL>`
-  
->  Add environment Variables in the .env file 
+2. Navigate to the project directory:
+   
+   ```bash
+   cd Code_Pair
 
-Add .env file in root directory 
+4. Install dependencies:
+   
+   ```bash
+   npm install
 
-```
-REACT_APP_BACKEND_URL=http://localhost:5000/
-```
+6. Start the application:
+   
+   ```bash
+   npm start
+   
+7. Open your web browser and navigate to the following URL:
+   
+   ```bash
+   http://localhost:5000
 
-> Install all the packages 
+8. Create a new room or join an existing room with a unique Room ID:
+9. Collaborate with others in real time by editing code and using the chat interface.
+10. Enjoy seamless code editing and communication!
 
-```
-npm install 
-```
+## Technologies Used
+- React
+- Socket.io
+- CodeMirror
+- react-hot-toast
+- uuid
 
-> To start server - 
+## Contributing
+Contributions are welcome! To contribute to this project:
 
-``` 
-npm start
-```
-
-Open the App on `http://localhost:5000/`
- 
-### Tech Stack / Tools Used : 
- 
-- Reactjs 
-- Nodejs 
-- Expressjs 
-- Socket.io 
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your changes and commit them.
+- Push your changes to your fork.
+- Open a pull request with a clear title and description.
